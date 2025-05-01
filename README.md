@@ -1,9 +1,17 @@
-## Project: Templates - Security Findings Browser (CVE, CWE, Nuclei)
+## Templates - Security Findings Browser (CVE, CWE, Nuclei)
 
-**1. Goal/Vision:**
+- [Templates - Security Findings Browser (CVE, CWE, Nuclei)](#templates---security-findings-browser-cve-cwe-nuclei)
+  - [Goal/Vision](#goalvision)
+  - [Core Features](#core-features)
+  - [Key Components / Architecture](#key-components--architecture)
+  - [Tech Stack](#tech-stack)
+  - [Potential Challenges](#potential-challenges)
+
+### Goal/Vision
+
 To create a unified, searchable web interface (built with Vite) that aggregates and displays information on CVEs (Common Vulnerabilities and Exposures), CWEs (Common Weakness Enumeration), Nuclei templates, and includes a CVSS (Common Vulnerability Scoring System) calculator. Aims to be a quick reference tool for security professionals and developers.
 
-**2. Core Features:**
+### Core Features
 
 -   **Data Aggregation:** Regularly fetch and update data from primary sources:
     -   CVEs: NVD (National Vulnerability Database) feeds.
@@ -15,7 +23,7 @@ To create a unified, searchable web interface (built with Vite) that aggregates 
 -   **CVSS Calculator:** Implement an interactive CVSS v3.x (or latest) calculator based on selected vector components.
 -   **Browse Functionality:** Allow browsing through CWE categories and Nuclei template directories/tags.
 
-**3. Key Components / Architecture:**
+### Key Components / Architecture
 
 -   **Frontend Application (Vite + React/Vue/Svelte):**
     -   **UI Components:** Search bar, filter controls, results list/table, detail views for CVE/CWE/Nuclei template, CVSS calculator interface.
@@ -29,7 +37,7 @@ To create a unified, searchable web interface (built with Vite) that aggregates 
     -   **Storage:** Outputs data into optimized JSON files for frontend consumption, populates a simple database, or prepares data for IndexedDB.
 -   **(Optional) Simple Backend API:** If data is too large for client-side or needs frequent updates without rebuilding the frontend, a simple API (e.g., Node.js/Express, Python/Flask) could serve the data.
 
-**4. Tech Stack:**
+### Tech Stack
 
 -   Frontend: Vite, React/Vue/Svelte, TypeScript/JavaScript
 -   Data Fetching (Pipeline): Node.js (`axios`, `git`), Python (`requests`, `GitPython`)
@@ -38,7 +46,7 @@ To create a unified, searchable web interface (built with Vite) that aggregates 
 -   Backend API (Optional): Node.js/Express, Python/Flask + Database (e.g., SQLite, PostgreSQL).
 -   UI Libraries: Tailwind CSS, etc.
 
-**5. Potential Challenges:**
+### Potential Challenges
 
 -   Handling large datasets (especially NVD CVE feed).
 -   Keeping data up-to-date (scheduling the pipeline).
